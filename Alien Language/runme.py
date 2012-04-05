@@ -1,6 +1,7 @@
 """
 Alien Language problem
 for Google Code Jam 2009
+Qualification Round
 
 author: 
 Christos Nitsas
@@ -20,8 +21,14 @@ python3 runme.py sample.in
 
 import sys
 import re
+from helpful import read_list_of_int
 from itertools import islice
 from itertools import product
+
+
+# when "import *" from the module, anything not in __all__ will be hidden
+__all__ = ['make_list_of_known_words', 'get_list_of_test_cases', 
+           'num_words_that_match', 'process_pattern', 'main']
 
 
 # match a single letter or a group of letters before a parenthesis
@@ -60,7 +67,7 @@ def main():
         print("Usage: python runme.py input_file")
         return 1
     with open(sys.argv[1], "r") as f:
-        (word_length, num_known_words, num_test_cases) = map(int, f.readline().split())
+        (word_length, num_known_words, num_test_cases) = read_list_of_int(f)
         known_words = make_list_of_known_words(islice(f, num_known_words))
         test_cases = get_list_of_test_cases(islice(f, num_test_cases))
         for (index, pattern) in enumerate(test_cases):
