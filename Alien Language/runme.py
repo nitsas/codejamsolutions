@@ -21,9 +21,10 @@ python3 runme.py sample.in
 
 import sys
 import re
-from helpful import read_list_of_int
 from itertools import islice
 from itertools import product
+# non-standard modules:
+from helpful import read_list_of_int
 
 
 # when "import *" from the module, anything not in __all__ will be hidden
