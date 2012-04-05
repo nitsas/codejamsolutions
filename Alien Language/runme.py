@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.2
 """
 Alien Language problem
 for Google Code Jam 2009
@@ -14,8 +15,10 @@ date:
 April, 2012
 
 usage:
-python3 runme.py sample.in
-(where sample.in is the input file)
+$ python3 runme.py sample.in
+or
+$ runme.py sample.in
+(where sample.in is the input file and $ the prompt)
 """
 
 
