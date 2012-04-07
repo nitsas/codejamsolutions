@@ -3,6 +3,7 @@
 Alien Language problem
 for Google Code Jam 2009
 Qualification Round
+(http://code.google.com/codejam/contest/dashboard?c=90101#s=p0)
 
 author: 
 Christos Nitsas

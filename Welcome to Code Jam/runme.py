@@ -3,6 +3,7 @@
 Welcome to Code Jam problem
 for Google Code Jam 2009
 Qualification Round
+(http://code.google.com/codejam/contest/dashboard?c=90101#s=p2)
 
 author: 
 Christos Nitsas
