@@ -68,7 +68,7 @@ def process_pattern(pattern):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python runme.py input_file")
+        print("Usage: runme.py input_file")
         return 1
     with open(sys.argv[1], "r") as f:
         (word_length, num_known_words, num_test_cases) = read_list_of_int(f)

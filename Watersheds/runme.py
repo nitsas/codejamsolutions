@@ -23,7 +23,6 @@ $ runme.py sample.in
 
 
 import sys
-from itertools import islice
 # non-standard modules:
 from helpful import read_int, read_list_of_int
 
@@ -104,7 +103,7 @@ def print_cell_labels(cell_labels):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python runme.py input_file")
+        print("Usage: runme.py input_file")
         return 1
     with open(sys.argv[1], "r") as f:
         num_maps = read_int(f)
