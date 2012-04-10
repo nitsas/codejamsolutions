@@ -16,7 +16,7 @@ date:
 April, 2012
 
 usage:
-$ python3 runme.py sample.in
+$ python3.2 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)
@@ -76,11 +76,14 @@ def rfindall(substring, string):
         pos = string.rfind(substring, 0, pos)
 
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: runme.py input_file")
-        return 1
-    with open(sys.argv[1], "r") as f:
+def main(filename=None):
+    if filename is None:
+        if len(sys.argv) == 2:
+            filename = sys.argv[1]
+        else:
+            print("Usage: runme.py input_file")
+            return 1
+    with open(filename, "r") as f:
         N = read_int(f)   # not needed
         for i, line in enumerate(f):
             count = count_matches_smart("welcome to code jam", line)

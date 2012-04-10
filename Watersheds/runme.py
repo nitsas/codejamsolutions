@@ -16,7 +16,7 @@ date:
 April, 2012
 
 usage:
-$ python3 runme.py sample.in
+$ python3.2 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)
@@ -102,11 +102,14 @@ def print_cell_labels(cell_labels):
         print(" ".join(line))
 
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: runme.py input_file")
-        return 1
-    with open(sys.argv[1], "r") as f:
+def main(filename=None):
+    if filename is None:
+        if len(sys.argv) == 2:
+            filename = sys.argv[1]
+        else:
+            print("Usage: runme.py input_file")
+            return 1
+    with open(filename, "r") as f:
         num_maps = read_int(f)
         for i in range(num_maps):
             print("Case #" + str(i+1) + ":")

@@ -16,7 +16,7 @@ date:
 April, 2012
 
 usage:
-$ python3 runme.py sample.in
+$ python3.2 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)
@@ -67,11 +67,14 @@ def process_pattern(pattern):
     return [set(match.group()) for match in _LETTER_OR_POSSIBLE_LETTERS_RE.finditer(pattern)]
 
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: runme.py input_file")
-        return 1
-    with open(sys.argv[1], "r") as f:
+def main(filename=None):
+    if filename is None:
+        if len(sys.argv) == 2:
+            filename = sys.argv[1]
+        else:
+            print("Usage: runme.py input_file")
+            return 1
+    with open(filename, "r") as f:
         (word_length, num_known_words, num_test_cases) = read_list_of_int(f)
         known_words = make_list_of_known_words(islice(f, num_known_words))
         test_cases = get_list_of_test_cases(islice(f, num_test_cases))
