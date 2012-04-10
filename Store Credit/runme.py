@@ -4,6 +4,9 @@ Store Credit problem
 for Google Code Jam Africa 2010
 Qualification
 
+Link to problem description: 
+http://code.google.com/codejam/contest/351101/dashboard#s=p0
+
 author: 
 Christos Nitsas
 (chrisn654)

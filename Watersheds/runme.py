@@ -3,7 +3,9 @@
 Watersheds problem
 for Google Code Jam 2009
 Qualification Round
-(http://code.google.com/codejam/contest/dashboard?c=90101#s=p1)
+
+Link to problem description:
+http://code.google.com/codejam/contest/dashboard?c=90101#s=p1
 
 author: 
 Christos Nitsas
