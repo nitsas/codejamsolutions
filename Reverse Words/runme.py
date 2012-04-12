@@ -39,7 +39,7 @@ def main(filename=None):
             return 1
     with open(filename, "r") as f:
         num_cases = read_int(f)
-        for i in range(1, num_cases + 1):
+        for i, line in enumerate(f, 1):
             words = read_list_of_str(f)
             words.reverse()
             print("Case #" + str(i) + ": " + " ".join(words))
