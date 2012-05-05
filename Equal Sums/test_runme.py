@@ -1,11 +1,11 @@
 #!/usr/bin/env python3.2
 """
-Unit Tests for the Freecell Statistics problem 
-for Google Code Jam 2011
-Round 1A
+Unit Tests for the Equal Sums problem 
+for Google Code Jam 2012
+Round 1B
 
 Link to problem description:
-http://code.google.com/codejam/contest/1145485/dashboard#s=p0
+http://code.google.com/codejam/contest/1836486/dashboard#s=p2
 
 author: 
 Christos Nitsas
@@ -33,9 +33,9 @@ import runme
 
 class TestRunme(unittest.TestCase):
     """
-    Unit Tests for the Freecell Statistics problem 
-    for Google Code Jam 2011
-    Round 1A
+    Unit Tests for the Equal Sums problem 
+    for Google Code Jam 2012
+    Round 1B
     """
     
     # define if needed

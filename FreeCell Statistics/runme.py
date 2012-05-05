@@ -15,7 +15,7 @@ language:
 Python 3.2.1
 
 date:
-April, 2012
+May, 2012
 
 usage:
 $ python3.2 runme.py sample.in
