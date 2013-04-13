@@ -1,0 +1,10 @@
+*.DS_Store
+helpful-template.py
+runme-template.py
+test_runme-template.py
+solutions
+*.in
+!*small-practise.in
+!sample.in
+*.out
+*/__pycache__
