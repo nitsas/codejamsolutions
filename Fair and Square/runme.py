@@ -26,6 +26,7 @@ $ runme.py sample.in
 
 
 import sys
+import itertools
 from math import sqrt, ceil, floor, log10
 # non-standard modules:
 from helpful import read_int, read_list_of_int
@@ -45,6 +46,13 @@ def count_fair_and_square_numbers_in_interval(low, high):
     return count
 
 
+def generate_fair_and_square_numbers_in_interval(low, high):
+    for num in generate_palindromes_in_interval(ceil(sqrt(low)), 
+                                                floor(sqrt(high))):
+        if is_palindrome(num**2):
+            yield num**2
+
+
 def generate_palindromes_in_interval(low, high):
     num_digits_low = count_digits_of(low)
     num_digits_high = count_digits_of(high)
@@ -60,13 +68,13 @@ def generate_palindromes_in_interval(low, high):
     for n in range(num_digits_low + 1, num_digits_high):
         yield from generate_palindromes_with_n_digits(n)
     # last, make all palindromes with num_digits_high digits
-    for palindrome in generate_palindromes_with_n_digits(num_digits_high):
-        # we have to stop as soon as we pass "high"
-        if palindrome > high:
-            raise(StopIteration)
-        else:
-            yield palindrome
-
+    if not num_digits_low == num_digits_high:
+        for palindrome in generate_palindromes_with_n_digits(num_digits_high):
+            # we have to stop as soon as we pass "high"
+            if palindrome > high:
+                raise(StopIteration)
+            else:
+                yield palindrome
 
 def generate_palindromes_with_n_digits(n):
     if n == 0:
