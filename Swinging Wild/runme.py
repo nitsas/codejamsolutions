@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Swinging Wild problem
 for Google Code Jam 2012
@@ -12,13 +12,13 @@ Christos Nitsas
 (chrisn654)
 
 language:
-Python 3.2.1
+Python 3(.2)
 
 date:
 May, 2012
 
 usage:
-$ python3.2 runme.py sample.in
+$ python3 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)

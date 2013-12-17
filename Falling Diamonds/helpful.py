@@ -6,7 +6,7 @@ Christos Nitsas
 (chrisn654)
 
 language:
-Python 3.3
+Python 3.2.3
 
 date:
 April, 2012
@@ -35,10 +35,4 @@ def read_list_of_int(file):
 
 def read_list_of_float(file):
     return list(map(float, read_list_of_str(file)))
-
-def is_odd(num):
-    return num & 1
-
-def is_even(num):
-    return not is_odd(num)
 

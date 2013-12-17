@@ -6,7 +6,7 @@ Christos Nitsas
 (chrisn654)
 
 language:
-Python 3.2.1
+Python 3(.2)
 
 date:
 April, 2012

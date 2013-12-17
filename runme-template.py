@@ -12,13 +12,13 @@ Christos Nitsas
 (chrisn654)
 
 language:
-Python 3.2.3
+Python 3.3
 
 date:
 May, 2012
 
 usage:
-$ python3.2 runme.py sample.in
+$ python3.3 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)

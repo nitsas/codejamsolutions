@@ -1,24 +1,24 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.3
 """
-Unit Tests for the Swinging Wild problem 
-for Google Code Jam 2012
-Round 2
+Unit Tests for the Pogo problem 
+for Google Code Jam 2013
+Round 1C
 
 Link to problem description:
-http://code.google.com/codejam/contest/1842485/dashboard#s=p0
+https://code.google.com/codejam/contest/2437488/dashboard#s=p1
 
 author: 
 Christos Nitsas
 (chrisn654)
 
 language:
-Python 3(.2)
+Python 3.3.2
 
 date:
 May, 2012
 
 usage:
-$ python3 test_runme.py
+$ python3.3 test_runme.py
 or
 $ test_runme.py
 """
@@ -33,9 +33,9 @@ import runme
 
 class TestRunme(unittest.TestCase):
     """
-    Unit Tests for the Swinging Wild problem 
-    for Google Code Jam 2012
-    Round 2
+    Unit Tests for the Pogo problem 
+    for Google Code Jam 2013
+    Round 1C
     """
     
     # define if needed
@@ -51,7 +51,7 @@ class TestRunme(unittest.TestCase):
     #    pass
     
     def test_main_on_sample_in(self):
-        # call runme.main and get it's output into from_main
+        # call runme.main and get its output into from_main
         with io.StringIO() as target_output_stream:
             # redirect stdout to an io.StringIO object to run main
             sys.stdout, old_stdout = target_output_stream, sys.stdout

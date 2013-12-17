@@ -12,13 +12,13 @@ Christos Nitsas
 (chrisn654)
 
 language:
-Python 3.2.3
+Python 3.3
 
 date:
 May, 2012
 
 usage:
-$ python3.2 test_runme.py
+$ python3.3 test_runme.py
 or
 $ test_runme.py
 """
