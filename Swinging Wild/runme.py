@@ -7,26 +7,24 @@ Round 2
 Link to problem description:
 http://code.google.com/codejam/contest/1842485/dashboard#s=p0
 
-author: 
-Christos Nitsas
-(chrisn654)
+Author: 
+  Christos Nitsas
+  (nitsas)
+  (chrisnitsas)
 
-language:
-Python 3(.2)
+Language:
+  Python 3(.2)
 
-date:
-May, 2012
+Date:
+  May, 2012
 
-usage:
-$ python3 runme.py sample.in
-or
-$ runme.py sample.in
-(where sample.in is the input file and $ the prompt)
+Usage:
+  python3 runme.py sample.in
 """
 
 
 import sys
-# non-standard modules:
+# modules I've written:
 from helpful import read_int, read_list_of_int
 
 
@@ -36,7 +34,7 @@ def make_list_of_vines(f, N):
 
 def is_target_reachable(pos, reach, next_vines, D, results=dict()):
     if pos + reach >= D:
-        return "YES"
+        return 'YES'
     reachable_vines = []
     for i, vine in enumerate(next_vines):
         if vine[0] > pos + reach:
@@ -50,10 +48,11 @@ def is_target_reachable(pos, reach, next_vines, D, results=dict()):
         if (new_pos, new_reach) in results:
             is_reachable = results[(new_pos, new_reach)]
         else:
-            is_reachable = is_target_reachable(new_pos, new_reach, next_vines[i+1:], D, results)
-        if is_reachable is "YES":
-            return "YES"
-    return "NO"
+            is_reachable = is_target_reachable(new_pos, new_reach, \
+                                               next_vines[i+1:], D, results)
+        if is_reachable is 'YES':
+            return 'YES'
+    return 'NO'
 
 
 def main(filename=None):
@@ -61,9 +60,9 @@ def main(filename=None):
         if len(sys.argv) == 2:
             filename = sys.argv[1]
         else:
-            print("Usage: runme.py input_file")
+            print('Usage: runme.py input_file')
             return 1
-    with open(filename, "r") as f:
+    with open(filename, 'r') as f:
         T = read_int(f)
         for i in range(1, T + 1):
             N = read_int(f)
@@ -71,11 +70,11 @@ def main(filename=None):
             D = read_int(f)
             pos = vines[0][0]
             reach = min(vines[0][0], vines[0][1])
-            print("Case #{0}: {1}".format(i, is_target_reachable(pos, reach, vines[1:], D)))
+            print('Case #{0}: {1}'.format(i, is_target_reachable(pos, reach, \
+                                                               vines[1:], D)))
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     status = main()
     sys.exit(status)
-
