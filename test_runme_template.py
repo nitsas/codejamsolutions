@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 """
 Unit Tests for the --Problem Name-- problem 
 for Google Code Jam --Year--
@@ -7,33 +7,32 @@ for Google Code Jam --Year--
 Link to problem description:
 --Link--
 
-author: 
-Christos Nitsas
-(chrisn654)
+Author: 
+  Christos Nitsas
+  (nitsas)
+  (chrisnitsas)
 
-language:
-Python 3.3
+Language:
+  Python 3(.4)
 
-date:
-May, 2012
+Date:
+  --Date--
 
-usage:
-$ python3.3 test_runme.py
-or
-$ test_runme.py
+Usage:
+  python3 test_runme.py
 """
 
 
 import io
 import sys
 import unittest
-# non-standard modules:
+# modules I've written:
 import runme
 
 
 class TestRunme(unittest.TestCase):
     """
-    Unit Tests for the --Problem Name-- problem 
+    Simple tests for the --Problem Name-- problem 
     for Google Code Jam --Year--
     --Round--
     """
@@ -55,12 +54,12 @@ class TestRunme(unittest.TestCase):
         with io.StringIO() as target_output_stream:
             # redirect stdout to an io.StringIO object to run main
             sys.stdout, old_stdout = target_output_stream, sys.stdout
-            runme.main("sample.in")
+            runme.main('sample.in')
             from_main = target_output_stream.getvalue()
             # get original stdout back
             sys.stdout = old_stdout
-        # get the "sample.out" file's contents
-        with open("sample.out", "r") as sample_out:
+        # get the 'sample.out' file's contents
+        with open('sample.out', 'r', encoding='utf-8') as sample_out:
             from_sample_out = sample_out.read()
         # compare runme.main's results with sample.out's contents
         self.assertEqual(from_main, from_sample_out)
@@ -68,4 +67,3 @@ class TestRunme(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
