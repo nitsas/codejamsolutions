@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Alien Language problem
 for Google Code Jam 2009
@@ -7,21 +7,19 @@ Qualification Round
 Link to problem description:
 http://code.google.com/codejam/contest/dashboard?c=90101#s=p0
 
-author: 
-Christos Nitsas
-(chrisn654)
+Author: 
+  Christos Nitsas
+  (nitsas)
+  (chrisnitsas)
 
-language:
-Python 3.2.1
+Language:
+  Python 3(.2)
 
-date:
-April, 2012
+Date:
+  April, 2012
 
-usage:
-$ python3.2 runme.py sample.in
-or
-$ runme.py sample.in
-(where sample.in is the input file and $ the prompt)
+Usage:
+  python3 runme.py input_file
 """
 
 
@@ -39,7 +37,7 @@ __all__ = ['make_list_of_known_words', 'get_list_of_test_cases',
 
 
 # match a single letter or a group of letters before a parenthesis
-_LETTER_OR_POSSIBLE_LETTERS_RE = re.compile(r"(\w+(?=\))|\w)")
+_LETTER_OR_POSSIBLE_LETTERS_RE = re.compile(r'(\w+(?=\))|\w)')
 
 
 def make_list_of_known_words(lines_of_words):
@@ -66,7 +64,8 @@ def num_words_that_match(pattern, known_words):
 
 
 def process_pattern(pattern):
-    return [set(match.group()) for match in _LETTER_OR_POSSIBLE_LETTERS_RE.finditer(pattern)]
+    return [set(match.group()) for match in \
+            _LETTER_OR_POSSIBLE_LETTERS_RE.finditer(pattern)]
 
 
 def main(filename=None):
@@ -74,18 +73,18 @@ def main(filename=None):
         if len(sys.argv) == 2:
             filename = sys.argv[1]
         else:
-            print("Usage: runme.py input_file")
+            print('Usage: runme.py input_file')
             return 1
-    with open(filename, "r") as f:
+    with open(filename, 'r') as f:
         (word_length, num_known_words, num_test_cases) = read_list_of_int(f)
         known_words = make_list_of_known_words(islice(f, num_known_words))
         test_cases = get_list_of_test_cases(islice(f, num_test_cases))
         for (index, pattern) in enumerate(test_cases):
-            print("Case #" + str(index+1) + ": " + str(num_words_that_match(pattern, known_words)))
+            print('Case #' + str(index+1) + ': ' + \
+                  str(num_words_that_match(pattern, known_words)))
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     status = main()
     sys.exit(status)
-
