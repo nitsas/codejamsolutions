@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Unit Tests for the Safety in Numbers problem 
 for Google Code Jam 2012
@@ -7,33 +7,32 @@ Round 1B
 Link to problem description:
 http://code.google.com/codejam/contest/1836486/dashboard#s=p0
 
-author: 
-Christos Nitsas
-(chrisn654)
+Author: 
+  Christos Nitsas
+  (nitsas)
+  (chrisnitsas)
 
-language:
-Python 3.2.1
+Language:
+  Python 3(.4)
 
-date:
-May, 2012
+Date:
+  May, 2012
 
-usage:
-$ python3.2 test_runme.py
-or
-$ test_runme.py
+Usage:
+  python3 test_runme.py
 """
 
 
 import io
 import sys
 import unittest
-# non-standard modules:
+# modules I've written:
 import runme
 
 
 class TestRunme(unittest.TestCase):
     """
-    Unit Tests for the Safety in Numbers problem 
+    Simple tests for the Safety in Numbers problem 
     for Google Code Jam 2012
     Round 1B
     """
@@ -51,16 +50,16 @@ class TestRunme(unittest.TestCase):
     #    pass
     
     def test_main_on_sample_in(self):
-        # call runme.main and get it's output into from_main
+        # call runme.main and get its output into from_main
         with io.StringIO() as target_output_stream:
             # redirect stdout to an io.StringIO object to run main
             sys.stdout, old_stdout = target_output_stream, sys.stdout
-            runme.main("sample.in")
+            runme.main('sample.in')
             from_main = target_output_stream.getvalue()
             # get original stdout back
             sys.stdout = old_stdout
-        # get the "sample.out" file's contents
-        with open("sample.out", "r") as sample_out:
+        # get the 'sample.out' file's contents
+        with open('sample.out', 'r', encoding='utf-8') as sample_out:
             from_sample_out = sample_out.read()
         # compare runme.main's results with sample.out's contents
         self.assertEqual(from_main, from_sample_out)
@@ -68,4 +67,3 @@ class TestRunme(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
