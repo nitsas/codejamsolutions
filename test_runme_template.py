@@ -65,5 +65,5 @@ class TestRunme(unittest.TestCase):
         self.assertEqual(from_main, from_sample_out)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
