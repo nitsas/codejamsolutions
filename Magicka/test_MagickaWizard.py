@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Unit Tests for the Magicka problem MagickaWizard class.
 for Google Code Jam 2011

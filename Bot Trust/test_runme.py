@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Unit Tests for the Bot Trust problem 
 for Google Code Jam 2011
@@ -18,7 +18,7 @@ date:
 April, 2012
 
 usage:
-$ python3.2 test_runme.py
+$ python3 test_runme.py
 or
 $ test_runme.py
 """
