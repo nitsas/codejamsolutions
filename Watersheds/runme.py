@@ -8,8 +8,8 @@ Link to problem description:
 http://code.google.com/codejam/contest/dashboard?c=90101#s=p1
 
 author: 
-Christos Nitsas
-(chrisn654)
+Chris Nitsas
+(nitsas)
 
 language:
 Python 3.2.1

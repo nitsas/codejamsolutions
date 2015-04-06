@@ -8,9 +8,8 @@ Link to problem description:
 --Link--
 
 Author: 
-  Christos Nitsas
+  Chris Nitsas
   (nitsas)
-  (chrisnitsas)
 
 Language:
   Python 3(.4)

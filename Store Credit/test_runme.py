@@ -5,8 +5,8 @@ for Google Code Jam 2010
 Qualification
 
 author: 
-Christos Nitsas
-(chrisn654)
+Chris Nitsas
+(nitsas)
 
 language:
 Python 3.2.1

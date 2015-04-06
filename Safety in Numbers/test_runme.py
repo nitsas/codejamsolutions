@@ -8,9 +8,8 @@ Link to problem description:
 http://code.google.com/codejam/contest/1836486/dashboard#s=p0
 
 Author: 
-  Christos Nitsas
+  Chris Nitsas
   (nitsas)
-  (chrisnitsas)
 
 Language:
   Python 3(.4)
