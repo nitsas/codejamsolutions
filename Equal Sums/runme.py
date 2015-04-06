@@ -18,7 +18,7 @@ date:
 May, 2012
 
 usage:
-$ python3.2 runme.py sample.in
+$ python3 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)
