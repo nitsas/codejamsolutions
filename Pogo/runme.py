@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 """
 Pogo problem
 for Google Code Jam 2013
@@ -18,7 +18,7 @@ date:
 May, 2012
 
 usage:
-$ python3.3 runme.py sample.in
+$ python3 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)

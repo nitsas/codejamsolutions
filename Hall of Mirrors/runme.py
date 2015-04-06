@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Hall of Mirrors problem
 for Google Code Jam 2012

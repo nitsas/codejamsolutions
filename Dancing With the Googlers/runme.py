@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Dancing With the Googlers problem
 for Google Code Jam 2012

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 """
 Magicka problem
 for Google Code Jam 2011
@@ -18,7 +18,7 @@ date:
 April, 2012
 
 usage:
-$ python3.2 runme.py sample.in
+$ python3 runme.py sample.in
 or
 $ runme.py sample.in
 (where sample.in is the input file and $ the prompt)
