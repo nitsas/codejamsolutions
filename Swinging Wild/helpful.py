@@ -2,12 +2,11 @@
 A collection of small, helpful functions I'll be using a lot.
 
 Author: 
-  Christos Nitsas
+  Chris Nitsas
   (nitsas)
-  (chrisnitsas)
 
 Language:
-  Python 3(.2)
+  Python 3(.4)
 
 Date:
   April, 2012

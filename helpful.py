@@ -2,9 +2,8 @@
 A collection of small, helpful functions I'll be using a lot.
 
 Author: 
-  Christos Nitsas
+  Chris Nitsas
   (nitsas)
-  (chrisnitsas)
 
 Language:
   Python 3(.4)
