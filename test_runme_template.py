@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Unit Tests for the --Problem Name-- problem 
+Unit Tests for the --Problem Name-- problem
 for Google Code Jam --Year--
 --Round--
 
 Link to problem description:
 --Link--
 
-Author: 
+Author:
   Chris Nitsas
   (nitsas)
 
@@ -31,23 +31,22 @@ import runme
 
 class TestRunme(unittest.TestCase):
     """
-    Simple tests for the --Problem Name-- problem 
+    Simple tests for the --Problem Name-- problem
     for Google Code Jam --Year--
     --Round--
     """
-    
     # define if needed
-    #def setUp(self):
-    #    pass
-    
+    # def setUp(self):
+    #     pass
+    #
     # define if needed
-    #def tearDown(self):
-    #    pass
-    
-    #def test_something(self):
-    #    # use self.assertEqual(), self.assertTrue() or self.assertRaises()
-    #    pass
-    
+    # def tearDown(self):
+    #     pass
+    #
+    # def test_something(self):
+    #     # use self.assertEqual(), self.assertTrue() or self.assertRaises()
+    #     pass
+    #
     def test_main_on_sample_in(self):
         # call runme.main and get its output into from_main
         with io.StringIO() as target_output_stream:
