@@ -7,7 +7,7 @@ for Google Code Jam --Year--
 Link to problem description:
 --Link--
 
-Author: 
+Author:
   Chris Nitsas
   (nitsas)
 
@@ -42,7 +42,7 @@ def parse_args():
     """
     parser = argparse.ArgumentParser(description=_program_description)
     parser.add_argument('input_file', help=_input_file_description)
-    #parser.add_argument('-v', '--verbose', action='store_true', 
+    #parser.add_argument('-v', '--verbose', action='store_true',
     #                    default=False, help='show progress')
     args = parser.parse_args()
     return args
