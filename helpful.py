@@ -1,7 +1,7 @@
 """
 A collection of small, helpful functions I'll be using a lot.
 
-Author: 
+Author:
   Chris Nitsas
   (nitsas)
 
@@ -14,7 +14,7 @@ Date:
 
 
 __name__ = 'helpful'
-__all__  = ['read_int', 'read_float', 'read_list_of_str', 
+__all__  = ['read_int', 'read_float', 'read_list_of_str',
             'read_list_of_int', 'read_list_of_float']
 
 
