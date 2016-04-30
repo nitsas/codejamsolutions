@@ -2,7 +2,7 @@
 solutions
 *.in
 !*small-practise.in
-!sample.in
+!*sample.in
 *.out
-!sample.out
+!*sample.out
 */__pycache__
