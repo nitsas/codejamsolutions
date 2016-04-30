@@ -48,9 +48,31 @@ def parse_args():
     return args
 
 
+def max_possible_num_of_fakes(topics):
+    return len(topics) - min_num_of_originals(topics)
+
+
+def min_num_of_originals(topics):
+    """
+    The number of originals is at least as big as max(number of
+    different first words, number of different second words).
+    """
+    first_words = set(topic[0] for topic in topics)
+    second_words = set(topic[1] for topic in topics)
+    
+    return max(len(first_words), len(second_words))
+
+
 def main(filename):
     with open(filename, 'r', encoding='utf-8') as f:
-        raise NotImplementedError()
+        num_test_cases = read_int(f)
+        test_cases = []
+        for i in range(num_test_cases):
+            num_topics = read_int(f)
+            topics = [read_list_of_str(f) for j in range(num_topics)]
+            test_cases.append(topics)
+    for i, tc in enumerate(test_cases, start=1):
+        print('Case #{}: {}'.format(i, max_possible_num_of_fakes(tc)))
     return 0
 
 
