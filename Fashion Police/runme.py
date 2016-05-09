@@ -24,6 +24,7 @@ Usage:
 
 import sys
 import argparse
+from collections import namedtuple, defaultdict
 # modules I've written:
 from helpful import *
 
@@ -48,9 +49,61 @@ def parse_args():
     return args
 
 
+TestCase = namedtuple('TestCase', ['J', 'P', 'S', 'K'])
+Outfit = namedtuple('Outfit', ['j', 'p', 's'])
+
+
+def outfits(tcase):
+    J, P, S, K = tcase
+    outfits_ = []
+    
+    jacket_pants = defaultdict(lambda: 0)
+    jacket_shirt = defaultdict(lambda: 0)
+    pants_shirt = defaultdict(lambda: 0)
+    
+    for j in range(1, J + 1):
+        for p in range(1, P + 1):
+            for s in range(1, S + 1):
+                if jacket_pants[(j, p)] >= K:
+                    continue
+                if jacket_shirt[(j, s)] >= K or pants_shirt[(p, s)] >= K:
+                    continue
+                outfits_.append(Outfit(j, p, s))
+                jacket_pants[(j, p)] += 1
+                jacket_shirt[(j, s)] += 1
+                pants_shirt[(p, s)] += 1
+    
+    left = []
+    for j in range(1, J+1):
+        for p in range(1, P + 1):
+            for s in range(1, S + 1):
+                if jacket_pants[(j, p)] < K and jacket_shirt[(j, s)] < K and pants_shirt[(p, s)] < K and (Outfit(j, p, s) not in outfits_):
+                    left.append('{} {} {}'.format(j, p, s))
+                    # print('{} {} {}'.format(j, p, s))
+                    # print('  k: {}'.format(K))
+                    # print('  jp: {}'.format(jacket_pants[(j, p)]))
+                    # print('  js: {}'.format(jacket_shirt[(j, s)]))
+                    # print('  ps: {}'.format(pants_shirt[(p, s)]))
+    if left:
+        print('--- combinations left ---')
+        for comb in left:
+            print(comb)
+        print('------')
+    
+    return outfits_
+
+
 def main(filename):
     with open(filename, 'r', encoding='utf-8') as f:
-        raise NotImplementedError()
+        num_test_cases = read_int(f)
+        test_cases = []
+        for i in range(num_test_cases):
+            test_cases.append(TestCase(*read_list_of_int(f)))
+    for i, tc in enumerate(test_cases, start=1):
+        outfits_ = outfits(tc)
+        print('Case #{}: {}'.format(i, len(outfits_)))
+        for outfit in outfits_:
+            print(' '.join(map(str, outfit)))
     return 0
 
 
